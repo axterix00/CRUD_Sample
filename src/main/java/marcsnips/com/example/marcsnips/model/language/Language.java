@@ -14,16 +14,8 @@ public class Language extends Auditable<Long> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
-//    @Column(name = "created_by", nullable = false)
-//    private String created_by;
-//    @Column(name = "modified_by", nullable = false)
-//    private String modified_by;
-//    @Column(name = "created_on", nullable = false, columnDefinition = "DATETIME default NOW()")
-//    private LocalDateTime created_on;
-//    @Column(name = "modified_on", nullable = false, columnDefinition = "DATETIME default NOW() ON UPDATE NOW()")
-//    private LocalDateTime modified_on;
 
     public Language() {
 

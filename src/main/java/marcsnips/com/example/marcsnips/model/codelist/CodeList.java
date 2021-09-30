@@ -1,13 +1,44 @@
 package marcsnips.com.example.marcsnips.model.codelist;
 
+import lombok.Getter;
+import lombok.Setter;
+import marcsnips.com.example.marcsnips.model.Auditable;
+
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
-public class CodeList {
+@Getter
+@Setter
+@Entity
+@Table
+public class CodeList extends Auditable<Long> {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String snippet;
+    private String description;
+    private Integer id_language;
+    private Integer id_type;
 
-    private String created_by;
-    private String updated_by;
-    private LocalDateTime date_created;
-    private LocalDateTime date_updated;
+    public CodeList() {
+    }
+
+    public CodeList(Long id, String name, String snippet, String description, Integer id_language, Integer id_type) {
+        this.id = id;
+        this.name = name;
+        this.snippet = snippet;
+        this.description = description;
+        this.id_language = id_language;
+        this.id_type = id_type;
+    }
+
+    public CodeList(String name, String snippet, String description, Integer id_language, Integer id_type) {
+        this.name = name;
+        this.snippet = snippet;
+        this.description = description;
+        this.id_language = id_language;
+        this.id_type = id_type;
+    }
+
 }

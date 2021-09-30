@@ -1,13 +1,32 @@
 package marcsnips.com.example.marcsnips.model.type;
 
+import lombok.Getter;
+import lombok.Setter;
+import marcsnips.com.example.marcsnips.model.Auditable;
+
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
-public class Type {
+@Getter
+@Setter
+@Entity
+@Table
+public class Type extends Auditable<Long> {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
 
-    private String created_by;
-    private String updated_by;
-    private LocalDateTime date_created;
-    private LocalDateTime date_updated;
+    public Type() {
+    }
+
+    public Type(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Type(String name) {
+        this.name = name;
+    }
 }
