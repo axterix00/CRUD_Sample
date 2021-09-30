@@ -17,27 +17,20 @@ import java.util.List;
 @EnableJpaRepositories("marcsnips.com.example.marcsnips.repository")
 @EnableJpaAuditing
 public class MarcSnipConfig {
-//
-//    @Bean
-//    CommandLineRunner commandLineRunner(UserRepository repository) {
-//        return args -> {
-//            User Marc = new User(
-//                    "Marc 21",
-//                    "marcli",
-//                    "Password123",
-//                    LocalDate.of(1992, 2, 27)
-//
-//            );
-//            User Other = new User(
-//                    "Name",
-//                    "Login",
-//                    "Password",
-//                    LocalDate.of(1993, 4, 6)
-//            );
-//
+
+    @Bean
+    CommandLineRunner commandLineRunner(UserRepository repository) {
+        return args -> {
+            User Marc = new User(
+                    "Marc 21",
+                    "marcli",
+                    "Password123",
+                    LocalDate.of(1992, 2, 27)
+
+            );
 //            repository.saveAll(
 //                    List.of(Marc, Other)
 //            );
-//        };
-//    }
+        };
+    }
 }
