@@ -1,12 +1,10 @@
-package marcsnips.com.example.marcsnips.service.user;
+package marcsnips.com.example.marcsnips.service;
 
-import marcsnips.com.example.marcsnips.model.user.User;
-import marcsnips.com.example.marcsnips.repository.user.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import marcsnips.com.example.marcsnips.model.User;
+import marcsnips.com.example.marcsnips.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,9 +17,12 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    @Autowired
     public List<User> getUser() {
         return userRepository.findAll();
+    }
+
+    public Optional<User> getUserWithId(Long id) {
+        return userRepository.findById(id);
     }
 
     public void createUser(List<User> userList) {

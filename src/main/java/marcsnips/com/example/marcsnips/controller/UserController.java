@@ -1,18 +1,18 @@
-package marcsnips.com.example.marcsnips.controller.user;
+package marcsnips.com.example.marcsnips.controller;
 
-import marcsnips.com.example.marcsnips.model.user.User;
-import marcsnips.com.example.marcsnips.service.user.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import marcsnips.com.example.marcsnips.model.User;
+import marcsnips.com.example.marcsnips.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "api/v1/user")
 public class UserController {
     private final UserService userService;
 
-    @Autowired
+    //@Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
@@ -20,6 +20,12 @@ public class UserController {
     @GetMapping
     public List<User> getUser() {
         return userService.getUser();
+    }
+
+
+    @GetMapping(path = "{userId}")
+    public Optional<User> getUserWithId(@PathVariable("userId") Long id) {
+        return userService.getUserWithId(id);
     }
 
     @PostMapping(path = "add")

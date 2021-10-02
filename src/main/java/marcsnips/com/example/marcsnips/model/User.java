@@ -1,22 +1,20 @@
-package marcsnips.com.example.marcsnips.model.user;
+package marcsnips.com.example.marcsnips.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import marcsnips.com.example.marcsnips.model.Auditable;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
 @Table
-public class User extends Auditable<Long> {
+public class User extends Auditable<String> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID userProfileId;
+    private Long id;
     @Column(name = "name", nullable = false, unique = true)
     private String name;
     @Column(name = "login", nullable = false, unique = true)
@@ -30,8 +28,8 @@ public class User extends Auditable<Long> {
     public User() {
     }
 
-    public User(UUID userProfileId, String name, String login, String password, LocalDate dob) {
-        this.userProfileId = userProfileId;
+    public User(Long id, String name, String login, String password, LocalDate dob) {
+        this.id = id;
         this.name = name;
         this.login = login;
         this.password = password;

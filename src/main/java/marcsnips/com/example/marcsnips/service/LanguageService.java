@@ -1,7 +1,7 @@
-package marcsnips.com.example.marcsnips.service.language;
+package marcsnips.com.example.marcsnips.service;
 
-import marcsnips.com.example.marcsnips.model.language.Language;
-import marcsnips.com.example.marcsnips.repository.language.LanguageRepository;
+import marcsnips.com.example.marcsnips.model.Language;
+import marcsnips.com.example.marcsnips.repository.LanguageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

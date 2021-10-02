@@ -1,7 +1,7 @@
-package marcsnips.com.example.marcsnips.controller.language;
+package marcsnips.com.example.marcsnips.controller;
 
-import marcsnips.com.example.marcsnips.service.language.LanguageService;
-import marcsnips.com.example.marcsnips.model.language.Language;
+import marcsnips.com.example.marcsnips.service.LanguageService;
+import marcsnips.com.example.marcsnips.model.Language;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +15,7 @@ public class LanguageController {
 
     private final LanguageService languageService;
 
-    @Autowired
+    //@Autowired
     public LanguageController(LanguageService languageService) {
         this.languageService = languageService;
     }

@@ -12,7 +12,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.Transient;
 import java.time.LocalDateTime;
 
 @Getter(AccessLevel.PROTECTED)
@@ -20,22 +19,18 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public class Auditable<U>{
-    //@CreatedBy
-    @Transient
+    @CreatedBy
     @Column(name = "created_by", updatable = false)
     private String created_by;
 
-    @Transient
     @Column(name = "created_on", updatable = false)//, columnDefinition="DATETIME DEFAULT NOW()")
     @CreatedDate
     private LocalDateTime created_on;
 
-    @Transient
-    //@LastModifiedBy
+    @LastModifiedBy
     @Column(name = "modified_by")
     private String modified_by;
 
-    @Transient
     @LastModifiedDate
     @Column(name = "modified_on")//, columnDefinition="DATETIME DEFAULT NOW() ON UPDATE  NOW()")
     private LocalDateTime modified_on;

@@ -1,6 +1,6 @@
-package marcsnips.com.example.marcsnips.repository.user;
+package marcsnips.com.example.marcsnips.repository;
 
-import marcsnips.com.example.marcsnips.model.user.User;
+import marcsnips.com.example.marcsnips.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

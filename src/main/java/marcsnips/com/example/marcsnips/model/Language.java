@@ -1,8 +1,7 @@
-package marcsnips.com.example.marcsnips.model.language;
+package marcsnips.com.example.marcsnips.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import marcsnips.com.example.marcsnips.model.Auditable;
 
 import javax.persistence.*;
 
