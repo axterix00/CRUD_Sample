@@ -9,4 +9,5 @@ public class EntityAuditorAware implements AuditorAware<String> {
     public Optional<String> getCurrentAuditor() {
         return Optional.of("Marc");
     }
+
 }

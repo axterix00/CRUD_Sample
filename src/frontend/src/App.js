@@ -1,7 +1,7 @@
 import Layout from './components/common/Layout';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Layout />
@@ -9,4 +9,3 @@ function App() {
   );
 }
 
-export default App;

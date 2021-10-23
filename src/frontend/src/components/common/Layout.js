@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter as Router } from "react-router-dom";
 import Header from './Header';
 import Footer from './Footer';
+import routes from "./Router";
 
-class Layout extends Component {
-    render() {
-        return (
-            <div id='layout'>
+export default function Layout() {
+    return (
+        <div id='layout'>
+            <Router>
                 <Header />
+                {routes}
                 <Footer />
-            </div>
-        );
-    }
+            </Router>
+        </div>
+    );
 }
-export default Layout;

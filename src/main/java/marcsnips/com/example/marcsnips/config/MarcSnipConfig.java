@@ -18,4 +18,5 @@ public class MarcSnipConfig {
     public AuditorAware<String> auditorAware() {
         return new EntityAuditorAware();
     }
+
 }

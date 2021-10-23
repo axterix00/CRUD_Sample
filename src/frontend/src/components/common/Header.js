@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from "react-router-dom";
 
-class Header extends Component {
-    render() {
-        return (
-            <div className="Header">
-                Header
-            </div>
-        );
-    }
+export default function Header() {
+    return (
+        <div className="Header">
+            <Link to="/">Home</Link>
+            <br />
+            <Link to="/about">About</Link>
+            <br />
+            <Link to="/x">404</Link>
+        </div>
+    );
 }
-
-
-export default Header;

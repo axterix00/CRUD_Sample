@@ -1,10 +1,15 @@
-import React, { Component } from 'react';
-import {BrowserRouter as router, link} from 'react-';
+import React from 'react';
+import { Switch, Route } from "react-router-dom";
+import Home from "../Home"
+import About from "../About"
+import MissingPage from "../MissingPage"
 
+const routes = (
+    <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route component={MissingPage} />
+    </Switch>
+);
 
-class Routing extends Component {
-
-}
-
-
-export default Routing;
+export default routes;
