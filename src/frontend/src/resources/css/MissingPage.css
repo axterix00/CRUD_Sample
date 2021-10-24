@@ -1,6 +1,7 @@
 .MissingPage {
     text-align: center;
-    background-color:antiquewhite;
+    background-color:#222222;
+    color:rgba(255, 255, 100, 0.8);
     height: 100%; 
     top: 40px;
     bottom: 40px;

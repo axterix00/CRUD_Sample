@@ -4,9 +4,7 @@ import '../resources/css/About.css';
 export default function About() {
     return (
         <div className="About">
-        <br />
             <h2>I am marc a developer</h2>
-            <br />
         </div>
     );
 }
