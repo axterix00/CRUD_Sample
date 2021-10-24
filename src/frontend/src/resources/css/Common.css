@@ -17,6 +17,7 @@ body > #main > div {
 }
 
 .Header {
+  font-size: x-large;
   text-align: left;
   background-color: #1e1e1e;
   height:auto;
@@ -29,7 +30,6 @@ body > #main > div {
 }
 
 .Header a {
-  font-size: x-large;
   padding: 40px;
   color:rgba(255, 255, 10, 0.9)
 }
@@ -40,28 +40,29 @@ body > #main > div {
 
 
 .Footer {
+  font-size: x-large;
   text-align: center;
   background-color:#1e1e1e;
   left: 0;
   bottom: 0;
   width: 100%;
   padding: 0.4% 0 0.4% 0;
-  height: 30px;
+  height: 40px;
   color:rgba(247, 247, 6, 0.8);
 }
 
 .Layout-Inner{
   height: auto;
   height: 90%;
-  margin: -10px 0 10px 0;
+  margin: -40px 0 0 0;
   min-height: 90%; 
 }
 
 
 .Layout{
   height: auto;
-  height: 95%; 
+  height: 96%; 
   vertical-align:bottom;
   padding: 10px;
-  height: 95%; 
+  height: 96%; 
 }
