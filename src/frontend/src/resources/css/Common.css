@@ -1,0 +1,49 @@
+body > #main > div {
+  height: 90vh;
+}
+
+.Header {
+  text-align: left;
+  background-color: wheat;
+  height:auto;
+  padding: 0.4%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.Footer {
+  text-align: center;
+  background-color:wheat;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.4%;
+  height: 30px;
+}
+
+
+.Header a {
+  font-size: x-large;
+  padding: 40px;
+  color:chocolate
+}
+
+.Layout-Inner{
+  height: auto;
+  height: 100%; 
+  vertical-align:bottom;
+  margin: 0 auto -30px;
+  min-height: 100%; 
+}
+
+
+.Layout{
+  height: auto;
+  height: 100%; 
+  vertical-align:bottom;
+  margin: 0 auto -30px;
+  min-height: 100%; 
+}

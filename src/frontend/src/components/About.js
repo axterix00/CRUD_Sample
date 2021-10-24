@@ -1,11 +1,12 @@
 import React from 'react';
+import '../resources/css/About.css';
 
 export default function About() {
     return (
         <div className="About">
-            <hr />
+        <br />
             <h2>I am marc a developer</h2>
-            <hr />
+            <br />
         </div>
     );
 }
